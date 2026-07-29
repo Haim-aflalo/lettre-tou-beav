@@ -50,7 +50,7 @@
         inset: 0;
         pointer-events: none;
         opacity: 0.22;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOc[...] );
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
         z-index: 20;
       }
 
@@ -697,7 +697,7 @@
     <button
       class="music-toggle"
       id="music-toggle"
-      aria-label="Toggle background music"
+      aria-label="Toggle music"
     >
       ♫
     </button>
@@ -717,14 +717,15 @@
               <span class="envelope-letter">
                 <strong>For you, my love</strong>
                 <small
-                  >A few words written from the heart to celebrate our love and the evening ahead…</small
+                  >A few words written from the heart, to celebrate our love
+                  and the evening ahead...</small
                 >
               </span>
               <span class="flap"></span>
               <span class="seal">♥</span>
             </span>
           </button>
-          <p class="open-hint">Tap the envelope to open it</p>
+          <p class="open-hint">Touch the envelope to open it</p>
         </div>
       </section>
 
@@ -737,15 +738,24 @@
             <!-- ✎ REPLACE THE TEXT BELOW WITH YOUR LETTER -->
             <p>My love,</p>
             <p>
-              There are days that remind us to say out loud what the heart already knows. Today, I simply wanted to remind you how much more beautiful my life is since you became part of it.
+              Some days remind us to say out loud what the heart already
+              knows. Today, I simply wanted to remind you how much more beautiful
+              my life is since you became part of it.
             </p>
             <p>
-              Thank you for the laughter you bring me, for the comfort you provide in each of my storms, and for always being there—in the best moments and the hard ones—and for the tenderness that only you know how to bring into my days. I couldn’t dream of a better person by my side.
+              Thank you for the laughter you give me, for the comfort you bring
+              during every storm, thank you for always being there in the most
+              beautiful moments and the hardest ones, and for the sweetness only
+              you know how to add to each of my days. I could not dream of a
+              better person by my side.
             </p>
             <p>
-              For this 15 Av, I didn’t just want to give you a gift. I wanted to give us a moment together, away from everyday life. Tonight, you choose our adventure… and I’ll simply enjoy every moment by your side.
+              For this 15 Av, I did not just want to give you a gift. I wanted
+              to give us a moment together, away from everyday life. Tonight,
+              you choose our adventure... and I simply enjoy every moment by your
+              side.
             </p>
-            <p class="signature">I love you,<br />Your husband ♥</p>
+            <p class="signature">I love you,<br />Your Boyfriend ♥</p>
           </article>
           <button class="reveal-btn" id="reveal">
             Choose our evening <span>↓</span>
@@ -759,12 +769,13 @@
             <div class="eyebrow">Your choice</div>
             <h2>What will our evening be?</h2>
             <p>
-              Three wishes, one rule: enjoy every moment together. Pick the one that makes you smile the most.
+              Three wishes, one rule: enjoy every moment together. Pick the one
+              that makes you smile the most.
             </p>
           </header>
           <div class="cards" id="cards"></div>
           <p class="footnote">
-            Your choice will stay between the two of us · with all my love
+            Your choice will stay between us · with all my love
           </p>
         </div>
       </section>
@@ -779,38 +790,38 @@
     >
       <div class="modal-box">
         <div class="heart">♥</div>
-        <h3 id="modal-title">Lovely choice</h3>
+        <h3 id="modal-title">Beautiful choice</h3>
         <p id="modal-text"></p>
         <div class="modal-actions">
-          <button class="cancel" id="cancel">I’ll think about it</button>
+          <button class="cancel" id="cancel">I'm still thinking</button>
           <button class="confirm" id="confirm">Send my choice ♥</button>
         </div>
       </div>
     </div>
 
     <script>
-      // ✎ EDIT YOUR ACTIVITIES HERE: title, description and finalMessage.
+      // ✎ EDIT YOUR ACTIVITIES HERE: title, description and final message.
       const activities = [
         {
           title: "Romantic picnic",
           description:
-            "A lovely spot just for us, a few treats to share, and the sky as our backdrop.",
+            "A lovely spot just for us, some treats to share, and the sky as our backdrop.",
           finalMessage:
-            "It's decided: I'll prepare our basket, treats and a charming spot. All you need to bring is your brightest smile.",
+            "It's decided: I'll prepare our basket, our treats, and a charming spot. All you need to do is come with your brightest smile.",
         },
         {
           title: "Dinner for two",
           description:
-            "A nice table at a restaurant, delicious dishes and a whole evening to be together.",
+            "A lovely table at a restaurant, delicious dishes, and an evening to reconnect.",
           finalMessage:
-            "Lovely choice. I'll book us a table for a dinner for two. Dress up the way you like — I'll take care of everything else.",
+            "Wonderful choice. I'll book us a table for a dinner for two. Dress up the way you love, and I'll take care of the rest.",
         },
         {
           title: "Cozy dinner at home",
           description:
-            "A gentle atmosphere, a delicious dinner, candles and our home just for us.",
+            "A soft atmosphere, a delicious meal, candles, and our home just for us.",
           finalMessage:
-            "Our home becomes our little romantic cocoon. I'll prepare dinner, the candles, and a tender evening — just you and me.",
+            "Our home becomes our little romantic cocoon. I'll prepare dinner, candles, and a sweet evening just for you and me.",
         },
       ];
 
@@ -836,7 +847,7 @@
           musicOn = true;
           musicButton.classList.add("playing");
           musicButton.textContent = "♫";
-          musicButton.title = "Turn off music";
+          musicButton.title = "Turn music off";
         } catch {
           musicOn = false;
           musicButton.classList.add("playing");
@@ -902,7 +913,7 @@
 
         document.querySelector("#modal-title").textContent =
           "Your choice is ready ♥";
-        modalText.textContent = `Send me " ${selected.title} " on WhatsApp now.`;
+        modalText.textContent = `Send me "${selected.title}" on WhatsApp now.`;
         document.querySelector(".modal-actions").innerHTML =
           `<a class="confirm" href="${whatsappUrl}" target="_blank" rel="noopener" style="text-decoration:none">Open WhatsApp ♥</a>`;
 
@@ -914,3 +925,4 @@
     </script>
   </body>
 </html>
+
