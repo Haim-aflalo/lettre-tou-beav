@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#7f2941" />
-    <title>Pour toi, mon amour — Tou BeAv</title>
+    <title>For you, my love — Tou BeAv</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap");
 
@@ -50,7 +50,7 @@
         inset: 0;
         pointer-events: none;
         opacity: 0.22;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOc[...] );
         z-index: 20;
       }
 
@@ -697,7 +697,7 @@
     <button
       class="music-toggle"
       id="music-toggle"
-      aria-label="Couper ou remettre la musique"
+      aria-label="Toggle background music"
     >
       ♫
     </button>
@@ -705,62 +705,50 @@
       <section class="envelope-screen" id="envelope-screen">
         <div class="envelope-scene">
           <div class="envelope-heading">
-            <div class="eyebrow">Une surprise rien que pour toi</div>
-            <h2>Mon amour,<br />tu as du courrier</h2>
+            <div class="eyebrow">A surprise just for you</div>
+            <h2>My love,<br />you have mail</h2>
           </div>
           <button
             class="envelope-button"
             id="open-envelope"
-            aria-label="Ouvrir l'enveloppe"
+            aria-label="Open the envelope"
           >
             <span class="envelope" id="envelope">
               <span class="envelope-letter">
-                <strong>Pour toi, mon amour</strong>
+                <strong>For you, my love</strong>
                 <small
-                  >Quelques mots écrits avec le cœur, pour célébrer notre amour
-                  et la soirée qui nous attend…</small
+                  >A few words written from the heart to celebrate our love and the evening ahead…</small
                 >
               </span>
               <span class="flap"></span>
               <span class="seal">♥</span>
             </span>
           </button>
-          <p class="open-hint">Touche l’enveloppe pour l’ouvrir</p>
+          <p class="open-hint">Tap the envelope to open it</p>
         </div>
       </section>
 
       <section class="screen intro" id="intro">
         <i class="petal one"></i><i class="petal two"></i>
         <div class="letter-wrap">
-          <div class="eyebrow">15 Av · juste nous deux</div>
-          <h1>Pour toi,<br /><em>mon amour</em></h1>
+          <div class="eyebrow">15 Av · just the two of us</div>
+          <h1>For you,<br /><em>my love</em></h1>
           <article class="letter">
-            <!-- ✎ REMPLACE LE TEXTE CI-DESSOUS PAR TA LETTRE -->
-            <p>Mon amour,</p>
+            <!-- ✎ REPLACE THE TEXT BELOW WITH YOUR LETTER -->
+            <p>My love,</p>
             <p>
-              Il y a des jours qui nous rappellent de dire tout haut ce que le
-              cœur sait déjà. Aujourd’hui, j’avais simplement envie de te
-              rappeler combien ma vie est plus belle depuis que tu en fais
-              partie.
+              There are days that remind us to say out loud what the heart already knows. Today, I simply wanted to remind you how much more beautiful my life is since you became part of it.
             </p>
             <p>
-              Merci pour les rires que tu m’offres, pour le réconfort que tu
-              sais apporter dans chacune de mes tempêtes, merci d’être toujours
-              là, dans les plus beaux moments comme dans les plus difficiles, et
-              pour cette douceur que toi seule sais mettre dans chacune de mes
-              journées. Je ne pourrais rêver d’une meilleure personne à mes
-              côtés.
+              Thank you for the laughter you bring me, for the comfort you provide in each of my storms, and for always being there—in the best moments and the hard ones—and for the tenderness that only you know how to bring into my days. I couldn’t dream of a better person by my side.
             </p>
             <p>
-              Pour ce 15 Av, je ne voulais pas simplement t’offrir un cadeau. Je
-              voulais nous offrir un moment à nous, loin du quotidien. Ce soir,
-              c’est toi qui choisis notre aventure… et moi, je profite
-              simplement de chaque instant à tes côtés.
+              For this 15 Av, I didn’t just want to give you a gift. I wanted to give us a moment together, away from everyday life. Tonight, you choose our adventure… and I’ll simply enjoy every moment by your side.
             </p>
-            <p class="signature">Je t’aime,<br />Ton mari ♥</p>
+            <p class="signature">I love you,<br />Your husband ♥</p>
           </article>
           <button class="reveal-btn" id="reveal">
-            Choisir notre soirée <span>↓</span>
+            Choose our evening <span>↓</span>
           </button>
         </div>
       </section>
@@ -768,16 +756,15 @@
       <section class="choices" id="choices">
         <div class="choices-inner">
           <header>
-            <div class="eyebrow">À toi de choisir</div>
-            <h2>Quelle sera notre soirée ?</h2>
+            <div class="eyebrow">Your choice</div>
+            <h2>What will our evening be?</h2>
             <p>
-              Trois envies, une seule règle : profiter de chaque instant
-              ensemble. Choisis celle qui te fait le plus sourire.
+              Three wishes, one rule: enjoy every moment together. Pick the one that makes you smile the most.
             </p>
           </header>
           <div class="cards" id="cards"></div>
           <p class="footnote">
-            Ton choix restera entre nous deux · avec tout mon amour
+            Your choice will stay between the two of us · with all my love
           </p>
         </div>
       </section>
@@ -792,38 +779,38 @@
     >
       <div class="modal-box">
         <div class="heart">♥</div>
-        <h3 id="modal-title">Très joli choix</h3>
+        <h3 id="modal-title">Lovely choice</h3>
         <p id="modal-text"></p>
         <div class="modal-actions">
-          <button class="cancel" id="cancel">Je réfléchis encore</button>
-          <button class="confirm" id="confirm">Envoyer mon choix ♥</button>
+          <button class="cancel" id="cancel">I’ll think about it</button>
+          <button class="confirm" id="confirm">Send my choice ♥</button>
         </div>
       </div>
     </div>
 
     <script>
-      // ✎ MODIFIE ICI TES ACTIVITÉS : titre, description et message final.
+      // ✎ EDIT YOUR ACTIVITIES HERE: title, description and finalMessage.
       const activities = [
         {
-          title: "Pique-nique en amoureux",
+          title: "Romantic picnic",
           description:
-            "Un joli coin rien qu’à nous, quelques douceurs à partager et le ciel pour décor.",
+            "A lovely spot just for us, a few treats to share, and the sky as our backdrop.",
           finalMessage:
-            "Alors c’est décidé : je prépare notre panier, nos gourmandises et un endroit plein de charme. Tu n’as plus qu’à venir avec ton plus beau sourire.",
+            "It's decided: I'll prepare our basket, treats and a charming spot. All you need to bring is your brightest smile.",
         },
         {
-          title: "Dîner en tête-à-tête",
+          title: "Dinner for two",
           description:
-            "Une belle table au restaurant, de bons plats et toute une soirée pour nous retrouver.",
+            "A nice table at a restaurant, delicious dishes and a whole evening to be together.",
           finalMessage:
-            "Très joli choix. Je nous réserve une table pour un dîner en tête-à-tête. Fais-toi belle comme tu aimes, je m’occupe de tout le reste.",
+            "Lovely choice. I'll book us a table for a dinner for two. Dress up the way you like — I'll take care of everything else.",
         },
         {
-          title: "Dîner cocon à la maison",
+          title: "Cozy dinner at home",
           description:
-            "Une ambiance douce, un délicieux dîner, des bougies et notre maison rien que pour nous.",
+            "A gentle atmosphere, a delicious dinner, candles and our home just for us.",
           finalMessage:
-            "Notre maison devient notre petit cocon romantique. Je prépare le dîner, les bougies et une soirée pleine de douceur, juste toi et moi.",
+            "Our home becomes our little romantic cocoon. I'll prepare dinner, the candles, and a tender evening — just you and me.",
         },
       ];
 
@@ -835,7 +822,7 @@
       const WHATSAPP_NUMBER = "33767551694";
       let selected = null;
 
-      // ✎ MUSIQUE : ton fichier est inclus avec le site.
+      // ✎ MUSIC: your file is included with the site.
       const MUSIC_SOURCE = "Believe.mp3";
       const music = document.querySelector("#background-music");
       const musicButton = document.querySelector("#music-toggle");
@@ -849,19 +836,19 @@
           musicOn = true;
           musicButton.classList.add("playing");
           musicButton.textContent = "♫";
-          musicButton.title = "Couper la musique";
+          musicButton.title = "Turn off music";
         } catch {
           musicOn = false;
           musicButton.classList.add("playing");
           musicButton.textContent = "▶";
-          musicButton.title = "La musique est momentanément indisponible";
+          musicButton.title = "Music is temporarily unavailable";
         }
       }
       function stopMusic() {
         music.pause();
         musicOn = false;
         musicButton.textContent = "♩̸";
-        musicButton.title = "Remettre la musique";
+        musicButton.title = "Turn music back on";
       }
 
       document.querySelector("#open-envelope").addEventListener(
@@ -910,14 +897,14 @@
         .querySelector("#cancel")
         .addEventListener("click", () => modal.classList.remove("open"));
       document.querySelector("#confirm").addEventListener("click", () => {
-        const message = `Mon amour ❤️ J’ai choisi : ${selected.title}`;
+        const message = `My love ❤️ I've chosen: ${selected.title}`;
         const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
         document.querySelector("#modal-title").textContent =
-          "Ton choix est prêt ♥";
-        modalText.textContent = `Envoie-moi maintenant « ${selected.title} » sur WhatsApp.`;
+          "Your choice is ready ♥";
+        modalText.textContent = `Send me " ${selected.title} " on WhatsApp now.`;
         document.querySelector(".modal-actions").innerHTML =
-          `<a class="confirm" href="${whatsappUrl}" target="_blank" rel="noopener" style="text-decoration:none">Ouvrir WhatsApp ♥</a>`;
+          `<a class="confirm" href="${whatsappUrl}" target="_blank" rel="noopener" style="text-decoration:none">Open WhatsApp ♥</a>`;
 
         window.open(whatsappUrl, "_blank", "noopener");
       });
