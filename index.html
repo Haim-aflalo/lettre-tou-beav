@@ -626,7 +626,9 @@
       @media (max-width: 760px) {
         .envelope-screen {
           min-height: 100dvh;
-          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           padding:
             max(20px, env(safe-area-inset-top))
             max(18px, env(safe-area-inset-right))
@@ -634,41 +636,37 @@
             max(18px, env(safe-area-inset-left));
         }
         .envelope-scene {
-          position: relative;
           width: 100%;
-          max-width: none;
-          height: 100dvh;
-          margin: 0;
-          display: block;
+          max-width: 390px;
+          height: auto;
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
         .envelope-heading {
-          position: absolute;
-          z-index: 2;
-          top: 12%;
-          left: 0;
-          right: 0;
+          position: static;
+          width: 100%;
         }
         .envelope-scene h2 {
           font-size: clamp(2.45rem, 12vw, 3.45rem);
-          margin-bottom: 28px;
+          margin: 0;
         }
         .envelope-button {
-          position: absolute;
-          top: 51%;
-          left: 50%;
-          width: min(340px, calc(100vw - 44px));
-          margin: 0;
-          transform: translate(-50%, -50%);
+          position: relative;
+          top: auto;
+          left: auto;
+          width: min(340px, 100%);
+          margin: 30px auto 0;
+          transform: none;
         }
         .envelope-button:hover .envelope {
           transform: none;
         }
         .open-hint {
-          position: absolute;
-          top: calc(51% + min(105px, 27vw) + 28px);
-          left: 0;
-          right: 0;
-          margin: 0;
+          position: static;
+          width: 100%;
+          margin: 28px 0 0;
         }
         .screen {
           padding: 46px 17px;
